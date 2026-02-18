@@ -1,0 +1,28 @@
+# Compiled Java classes
+*.class
+
+# Log files
+*.log
+
+# Package Files (Keep your repo small)
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# IntelliJ IDEA settings
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Output folder
+out/
+build/
+bin/
+
+# System files
+.DS_Store
+Thumbs.db
+core

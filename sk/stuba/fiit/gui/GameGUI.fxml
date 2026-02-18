@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.stuba.fiit.gui.MainController">
+   <children>
+      <Button fx:id="loginBtn" layoutX="247.0" layoutY="342.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="107.0" text="Log in" visible="false" />
+      <Label fx:id="loginLbl1" alignment="CENTER" contentDisplay="CENTER" layoutX="236.0" layoutY="122.0" prefHeight="35.0" prefWidth="130.0" text="Log in" visible="false">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font></Label>
+      <TextField fx:id="userNameTxt" layoutX="181.0" layoutY="201.0" prefHeight="26.0" prefWidth="235.0" promptText="Username" visible="false" />
+      <PasswordField fx:id="passwordTxt" layoutX="182.0" layoutY="267.0" prefHeight="26.0" prefWidth="235.0" promptText="Password" visible="false" />
+      <Label fx:id="loginLbl2" alignment="CENTER" layoutX="236.0" layoutY="160.0" prefHeight="35.0" prefWidth="130.0" stylesheets="@application.css" text="Login Failed" textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="loginLbl3" alignment="CENTER" layoutX="235.0" layoutY="44.0" prefHeight="35.0" prefWidth="130.0" stylesheets="@application.css" text="Login Success" textFill="#00d700" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="welcomeBackLbl" alignment="CENTER" layoutX="200.0" layoutY="8.0" prefHeight="36.0" prefWidth="200.0" stylesheets="@application.css" text="Welcome back" textFill="#d9bdbd" visible="false">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnToRegister" layoutX="120.0" layoutY="330.0" mnemonicParsing="false" onAction="#toRegister" prefHeight="53.0" prefWidth="144.0" text="Register">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnToLogin" layoutX="336.0" layoutY="330.0" mnemonicParsing="false" onAction="#toLogin" prefHeight="53.0" prefWidth="144.0" text="Log in">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <Label fx:id="startScreenLbl1" alignment="CENTER" layoutX="36.0" layoutY="101.0" prefHeight="100.0" prefWidth="530.0" text="Turn(é) It Up">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="65.0" />
+         </font>
+      </Label>
+      <Label fx:id="startScreenLbl2" alignment="CENTER" layoutX="117.0" layoutY="294.0" prefHeight="36.0" prefWidth="150.0" text="You don't have an account yet? Create one right now!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="startScreenLbl3" alignment="CENTER" layoutX="357.0" layoutY="294.0" prefHeight="36.0" prefWidth="101.0" text="Not your first time? Go ahead and Login!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Label>
+      <Button fx:id="backBtn" layoutX="278.0" layoutY="423.0" mnemonicParsing="false" onAction="#backToStart" prefHeight="26.0" prefWidth="42.0" text="Back" visible="false" />
+      <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" height="430.0" layoutX="125.0" layoutY="35.0" strokeType="INSIDE" visible="false" width="350.0">
+         <fill>
+            <LinearGradient endX="0.01136363681518672" endY="0.03409089464129824" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" opacity="0.6700000166893005" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8509804010391235" green="0.7411764860153198" blue="0.7411764860153198" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient startX="1.0" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" opacity="0.23708204925060272" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8509804010391235" green="0.7411764860153198" blue="0.7411764860153198" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Rectangle>
+      <CheckBox fx:id="singerCheckBox" layoutX="193.0" layoutY="192.0" mnemonicParsing="false" onAction="#singerSelected" prefHeight="12.0" prefWidth="106.0" text="Singer" visible="false">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="artistCheckBox" layoutX="193.0" layoutY="350.0" mnemonicParsing="false" onAction="#artistSelected" prefHeight="12.0" prefWidth="106.0" text="Artist" visible="false">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="solistCheckBox" layoutX="245.0" layoutY="238.0" mnemonicParsing="false" onAction="#solistSelected" prefHeight="6.0" prefWidth="74.0" text="Solist" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="groupCheckBox" layoutX="245.0" layoutY="282.0" mnemonicParsing="false" onAction="#groupSelected" prefHeight="6.0" prefWidth="74.0" text="Group" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </CheckBox>
+      <Button fx:id="nextBtn1" layoutX="447.0" layoutY="435.0" mnemonicParsing="false" onAction="#typeSelected" prefHeight="7.0" prefWidth="21.0" text="&gt;" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="registerLbl1" alignment="CENTER" layoutX="170.0" layoutY="99.0" prefHeight="78.0" prefWidth="261.0" text="Tell us about yourself I am a..." textAlignment="CENTER" textFill="#ac2222" visible="false" wrapText="true">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="registerLbl2" alignment="CENTER" layoutX="126.0" layoutY="41.0" prefHeight="46.0" prefWidth="350.0" textAlignment="CENTER" textFill="#ac2222" visible="false" wrapText="true">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="registrationBtn" layoutX="247.0" layoutY="342.0" mnemonicParsing="false" onAction="#halfRegistered" prefHeight="35.0" prefWidth="107.0" text="Register" visible="false" />
+      <Label fx:id="registrationLbl1" alignment="CENTER" contentDisplay="CENTER" layoutX="209.0" layoutY="122.0" prefHeight="46.0" prefWidth="182.0" text="Registration" visible="false">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="registrationUserName" layoutX="181.0" layoutY="201.0" prefHeight="26.0" prefWidth="235.0" promptText="Username" visible="false" />
+      <PasswordField fx:id="registrationPassword" layoutX="182.0" layoutY="267.0" prefHeight="26.0" prefWidth="235.0" promptText="Password" visible="false" />
+      <Label fx:id="registrationLbl2" layoutX="182.0" layoutY="174.0" prefHeight="26.0" prefWidth="145.0" text="Enter your username:" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="registrationLbl3" layoutX="182.0" layoutY="240.0" prefHeight="26.0" prefWidth="145.0" text="Enter your password:" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <DatePicker fx:id="sinceDate" layoutX="148.0" layoutY="148.0" prefHeight="8.0" prefWidth="148.0" promptText="yyyy.mm.dd" visible="false" />
+      <DatePicker fx:id="untilDate" layoutX="310.0" layoutY="148.0" prefHeight="8.0" prefWidth="148.0" promptText="yyyy.mm.dd" visible="false" />
+      <CheckBox fx:id="portugalCheckBox" layoutX="152.0" layoutY="191.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" text="Portugal" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="spainCheckBox" layoutX="152.0" layoutY="250.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" text="Spain" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="italyCheckBox" layoutX="314.0" layoutY="191.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" text="Italy" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="czechiaCheckBox" layoutX="314.0" layoutY="250.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" text="Czechia" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="slovakiaCheckBox" layoutX="314.0" layoutY="309.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" text="Slovakia" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="franceCheckBox" layoutX="152.0" layoutY="309.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" text="France" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="germanyCheckBox" layoutX="152.0" layoutY="368.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" text="Germany" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="polandCheckBox" layoutX="314.0" layoutY="368.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" text="Poland" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="selectAll" layoutX="250.0" layoutY="414.0" mnemonicParsing="false" onAction="#allSelect" prefHeight="26.0" prefWidth="99.0" text="Select all" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </CheckBox>
+      <Label fx:id="selectionLbl1" alignment="CENTER" layoutX="144.0" layoutY="46.0" prefHeight="84.0" prefWidth="310.0" text="Select desired date and countries" textAlignment="CENTER" visible="false" wrapText="true">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="selectionLbl2" layoutX="150.0" layoutY="130.0" prefHeight="22.0" prefWidth="310.0" text="Since:                                    Until:" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="previousBtn1" layoutX="422.0" layoutY="435.0" mnemonicParsing="false" onAction="#previousOne" prefHeight="7.0" prefWidth="21.0" text="&lt;" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="nextBtn2" layoutX="447.0" layoutY="435.0" mnemonicParsing="false" onAction="#countriesSelected" prefHeight="7.0" prefWidth="21.0" text="&gt;" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="infoLbl" alignment="TOP_LEFT" layoutX="129.0" layoutY="35.0" prefHeight="430.0" prefWidth="344.0" styleClass="bold-label" visible="false" wrapText="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="infoLbl2" alignment="CENTER" layoutX="10.0" layoutY="-4.0" prefHeight="36.0" prefWidth="579.0" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="infoLbl4" alignment="TOP_LEFT" layoutX="129.0" layoutY="35.0" prefHeight="430.0" prefWidth="344.0" styleClass="bold-label" visible="false" wrapText="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="infoLbl3" alignment="CENTER" layoutX="10.0" layoutY="-4.0" prefHeight="36.0" prefWidth="579.0" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutBtn" layoutX="528.0" layoutY="13.0" mnemonicParsing="false" text="Log out" visible="false" />
+   </children>
+</AnchorPane>

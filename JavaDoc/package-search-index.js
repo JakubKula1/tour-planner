@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"sk.stuba.fiit.events"},{"l":"sk.stuba.fiit.Exceptions"},{"l":"sk.stuba.fiit.gui"},{"l":"sk.stuba.fiit.characters"},{"l":"sk.stuba.fiit.main"}];updateSearchResults();
